@@ -1,0 +1,377 @@
+/* InvoiceDrawer mockup (Figma 1001:16197), 501x400 design px. */
+.wp-invoice {
+  border-radius: 8px;
+}
+
+.wp-invoice *,
+.wp-invoice *::before,
+.wp-invoice *::after {
+  box-sizing: border-box;
+}
+
+.wp-invoice p {
+  margin: 0;
+}
+
+.wp-invoice__card {
+  position: relative;
+  width: 501px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fcfcfd;
+  font-family: var(--font-button);
+  font-style: normal;
+  white-space: nowrap;
+}
+
+.wp-invoice__border {
+  position: absolute;
+  inset: 0 0 0.07px 0;
+  border: 0.667px solid rgba(255, 255, 255, 0.1);
+  border-radius: 21.333px;
+}
+
+.wp-invoice__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Drawer (clipped by the card at the bottom) */
+.wp-invoice__drawer {
+  position: absolute;
+  left: 58px;
+  top: 59px;
+  width: 384.81px;
+  height: 608px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10.262px;
+  box-shadow: 95.355px 0 47.677px 0 rgba(0, 0, 0, 0.35);
+}
+
+.wp-invoice__header {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 12.827px 15.392px;
+}
+
+.wp-invoice__title {
+  display: flex;
+  align-items: center;
+  gap: 7.696px;
+  overflow: hidden;
+}
+
+.wp-invoice__title-text,
+.wp-invoice__close {
+  font-weight: 500;
+  font-size: 10.262px;
+  line-height: 16px;
+  color: #101828;
+}
+
+.wp-invoice__close {
+  color: #667085;
+}
+
+.wp-invoice__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.565px;
+  height: 10.262px;
+  padding: 1.283px 3.848px;
+  border-radius: 41.046px;
+  background: #fffaeb;
+  line-height: 8.979px;
+}
+
+/* Font Awesome "circle" glyph (a font in Figma), drawn as a dot. */
+.wp-invoice__badge-dot {
+  flex-shrink: 0;
+  width: 2.565px;
+  height: 2.565px;
+  border-radius: 50%;
+  background: #e87c07;
+}
+
+.wp-invoice__badge-text {
+  font-weight: 500;
+  font-size: 6.414px;
+  color: #af6606;
+}
+
+.wp-invoice__body {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7.696px;
+  overflow: hidden;
+  padding: 0 15.392px 10.262px;
+}
+
+.wp-invoice__doc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10.262px;
+  overflow: hidden;
+  padding: 15.392px;
+  background: #fff;
+  border: 0.641px solid #eaecf0;
+  border-radius: 7.696px;
+}
+
+.wp-invoice__top {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.wp-invoice__logo {
+  position: relative;
+  flex-shrink: 0;
+  width: 80.474px;
+  height: 14.366px;
+  overflow: hidden;
+}
+
+.wp-invoice__logo-mark,
+.wp-invoice__logo-text {
+  position: absolute;
+  display: block;
+  max-width: none;
+}
+
+.wp-invoice__logo-mark {
+  left: 0;
+  top: -0.0014px;
+  width: 23.1134px;
+  height: 14.369px;
+}
+
+.wp-invoice__logo-text {
+  left: 25.776px;
+  top: 1.777px;
+  width: 54.696px;
+  height: 10.9918px;
+}
+
+.wp-invoice__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.283px;
+  overflow: hidden;
+}
+
+.wp-invoice__meta-title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 12.827px;
+  line-height: 18px;
+  color: #101828;
+}
+
+/* Text styles. Line heights are rounded up like Figma's auto-height text boxes. */
+.wp-invoice__small {
+  font-weight: 400;
+  font-size: 7.696px;
+  line-height: 12px;
+  color: #475467;
+}
+
+.wp-invoice__small--medium {
+  font-weight: 500;
+}
+
+.wp-invoice__small--secondary {
+  color: #344054;
+}
+
+.wp-invoice__text {
+  font-weight: 400;
+  font-size: 8.979px;
+  line-height: 13px;
+  color: #101828;
+}
+
+.wp-invoice__text--medium {
+  font-weight: 500;
+}
+
+.wp-invoice__text--semibold {
+  font-weight: 600;
+}
+
+.wp-invoice__parties {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10.262px;
+  overflow: hidden;
+}
+
+.wp-invoice__stack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.283px;
+  overflow: hidden;
+}
+
+.wp-invoice__dates {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 7.696px;
+  line-height: 12px;
+  color: #344054;
+}
+
+.wp-invoice__divider {
+  width: 100%;
+  height: 0.641px;
+  flex-shrink: 0;
+  background: #eaecf0;
+}
+
+.wp-invoice__deal {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.wp-invoice__deal-step {
+  font-weight: 400;
+  font-size: 8.979px;
+  line-height: 13px;
+  color: #475467;
+}
+
+/* Line items */
+.wp-invoice__lines {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  border: 0.641px solid #eaecf0;
+  border-radius: 5.131px;
+}
+
+.wp-invoice__line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10.262px;
+  overflow: hidden;
+  padding: 7.696px 10.262px;
+  border-top: 0.641px solid #eaecf0;
+}
+
+.wp-invoice__line--head {
+  border-top: 0;
+  background: #f9fafb;
+}
+
+.wp-invoice__line--total {
+  background: #f9fafb;
+}
+
+.wp-invoice__desc {
+  flex: 1 0 0;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.wp-invoice__total {
+  font-weight: 600;
+  font-size: 12.827px;
+  line-height: 20px;
+  color: #101828;
+}
+
+.wp-invoice__pay {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.848px;
+  overflow: hidden;
+  padding: 7.696px 10.262px;
+  border-radius: 5.131px;
+  background: #f9fafb;
+}
+
+.wp-invoice__pay-copy {
+  width: 100%;
+  white-space: normal;
+  line-height: 11.544px;
+}
+
+/* Footer */
+.wp-invoice__footer {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 7.696px;
+  overflow: hidden;
+  padding: 10.262px 15.392px;
+  border-top: 0.641px solid #eaecf0;
+}
+
+.wp-invoice__btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28.219px;
+  padding: 8.979px 10.262px;
+  border-radius: 5.131px;
+  font-weight: 600;
+  font-size: 8.979px;
+  line-height: 13px;
+}
+
+.wp-invoice__btn--secondary {
+  width: 173.806px;
+  background: #fff;
+  border: 0.641px solid #d0d5dd;
+  color: #344054;
+}
+
+.wp-invoice__btn--primary {
+  width: 172.523px;
+  background: #ff4d07;
+  color: #fff;
+}

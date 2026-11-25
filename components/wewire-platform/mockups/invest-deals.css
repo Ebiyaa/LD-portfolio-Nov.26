@@ -1,0 +1,749 @@
+/* InvestDeals mockup card (Figma 1001:14941). Design px inside a 1019×400 ScaledCanvas. */
+
+.wp-invest {
+  /* Card corner from the "Border" layer (21.333px), scaled with the stage. */
+  border-radius: calc(21.333px * var(--cs-scale, 1));
+}
+
+.wp-invest *,
+.wp-invest *::before,
+.wp-invest *::after {
+  box-sizing: border-box;
+}
+
+.wp-invest p,
+.wp-invest ul {
+  margin: 0;
+  padding: 0;
+}
+
+.wp-invest ul {
+  list-style: none;
+}
+
+.wp-invest img {
+  display: block;
+  max-width: none;
+}
+
+.wp-invest__icon {
+  display: block;
+  flex: none;
+}
+
+/* ---------- Card frame ---------- */
+
+.wp-invest__card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1019px;
+  height: 400px;
+  border-radius: 21.333px;
+  overflow: hidden;
+  font-family: var(--font-button);
+  color: #101828;
+}
+
+.wp-invest__border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1019px;
+  height: 399.933px;
+  border: 0.667px solid rgba(255, 255, 255, 0.1);
+  border-radius: 21.333px;
+}
+
+.wp-invest__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1019px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.wp-invest__app {
+  position: absolute;
+  left: 101px;
+  top: 71px;
+  width: 818px;
+  height: 531.267px;
+  background: #fff;
+  border-radius: 10.82px;
+  overflow: hidden;
+}
+
+/* ---------- Sidebar ---------- */
+
+.wp-invest__sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 147.153px;
+  height: 531.267px;
+  padding: 0 8.656px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8.656px;
+}
+
+.wp-invest__menu-header {
+  width: 129.841px;
+  display: flex;
+  flex-direction: column;
+  flex: none;
+}
+
+.wp-invest__menu-header-inner {
+  height: 43.28px;
+  padding: 4.328px 10.82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-invest__logo-text {
+  position: relative;
+  width: 72.732px;
+  height: 12.984px;
+  overflow: hidden;
+}
+
+.wp-invest__logo-mark {
+  position: absolute;
+  left: 0;
+  top: -0.001px;
+}
+
+.wp-invest__logo-word {
+  position: absolute;
+  left: 23.296px;
+  top: 1.606px;
+}
+
+.wp-invest__nav-divider {
+  width: 129.841px;
+  height: 0.541px;
+  background: #f2f4f7;
+  flex: none;
+}
+
+.wp-invest__account {
+  width: 100%;
+  padding: 0 6.492px;
+  display: flex;
+  align-items: center;
+  gap: 6.492px;
+  flex: none;
+}
+
+.wp-invest__avatar {
+  width: 17.312px;
+  height: 17.312px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+}
+
+.wp-invest__account-text {
+  flex: 1 0 0;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.164px;
+  font-size: 7.574px;
+}
+
+.wp-invest__account-name {
+  width: 47.608px;
+  line-height: 10.82px;
+  color: #475467;
+}
+
+.wp-invest__account-balance {
+  font-weight: 600;
+  line-height: normal;
+  color: #101828;
+  white-space: nowrap;
+}
+
+.wp-invest__nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.164px;
+}
+
+.wp-invest__nav-item {
+  width: 129.841px;
+  padding: 4.328px 6.492px;
+  border-radius: 4.328px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wp-invest__nav-item--sub {
+  padding-left: 12.984px;
+}
+
+.wp-invest__nav-item--active {
+  background: #f9fafb;
+  padding-right: 2.164px;
+}
+
+.wp-invest__nav-main {
+  display: flex;
+  align-items: center;
+  gap: 4.328px;
+}
+
+.wp-invest__nav-icon {
+  width: 10.82px;
+  height: 10.82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475467;
+}
+
+.wp-invest__nav-label {
+  font-size: 7.574px;
+  line-height: 10.82px;
+  color: #475467;
+  white-space: nowrap;
+}
+
+.wp-invest__nav-item--active .wp-invest__nav-icon,
+.wp-invest__nav-item--selected .wp-invest__nav-icon {
+  color: #ff4d07;
+}
+
+.wp-invest__nav-item--active .wp-invest__nav-label,
+.wp-invest__nav-item--selected .wp-invest__nav-label {
+  font-weight: 500;
+  color: #101828;
+}
+
+.wp-invest__nav-arrow {
+  width: 10.82px;
+  height: 10.82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475467;
+}
+
+.wp-invest__nav-arrow--dark {
+  color: #101828;
+}
+
+/* ---------- Main column ---------- */
+
+.wp-invest__main {
+  position: absolute;
+  left: 147.153px;
+  top: 0;
+  width: 670.847px;
+  padding: 17.312px 17.312px 0;
+}
+
+.wp-invest__page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10.82px;
+}
+
+.wp-invest__page-header-row {
+  height: 27.591px;
+  display: flex;
+  align-items: center;
+  gap: 8.656px;
+}
+
+.wp-invest__title {
+  flex: 1 0 0;
+  min-width: 1px;
+  font-size: 12.984px;
+  font-weight: 500;
+  line-height: 17.312px;
+  color: #101828;
+}
+
+.wp-invest__actions {
+  display: flex;
+  align-items: center;
+  gap: 4.328px;
+  font-size: 7.574px;
+  line-height: 10.82px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.wp-invest__btn {
+  height: 19.476px;
+  padding: 4.328px 6.492px;
+  border: 0.541px solid #d0d5dd;
+  border-radius: 4.328px;
+  background: #fff;
+  color: #344054;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.328px;
+}
+
+.wp-invest__btn--primary {
+  border: 0;
+  background: #ff4d07;
+  color: #fff;
+}
+
+.wp-invest__body {
+  margin-top: 19.476px;
+  display: flex;
+  flex-direction: column;
+  gap: 8.656px;
+}
+
+/* Stat tiles */
+
+.wp-invest__stats {
+  height: 63.298px;
+  padding: 10.82px;
+  border: 0.541px solid #eaecf0;
+  border-radius: 6.492px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 17.312px;
+}
+
+.wp-invest__stat-group {
+  flex: 1 0 0;
+  min-width: 1px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 17.312px;
+}
+
+.wp-invest__stat {
+  flex: 1 0 0;
+  min-width: 1px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 6.492px;
+}
+
+.wp-invest__stat--first {
+  flex: none;
+  width: 62.757px;
+  justify-content: flex-start;
+  gap: 4.328px;
+}
+
+.wp-invest__stat-label {
+  font-size: 7.574px;
+  line-height: normal;
+  color: #667085;
+  white-space: nowrap;
+}
+
+.wp-invest__stat-value {
+  font-size: 12.984px;
+  font-weight: 600;
+  line-height: normal;
+  color: #101828;
+  white-space: nowrap;
+}
+
+.wp-invest__stat-cents {
+  color: #98a2b3;
+}
+
+.wp-invest__stat-divider {
+  flex: none;
+  width: 0;
+  height: 63.298px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-invest__stat-divider img {
+  flex: none;
+  transform: rotate(-90deg);
+}
+
+/* Repayment alert */
+
+.wp-invest__alert {
+  height: 32.82px;
+  padding: 4.328px 8.656px;
+  border-radius: 4.328px;
+  background: #fcf3e6;
+  display: flex;
+  align-items: center;
+  gap: 6.492px;
+}
+
+.wp-invest__alert-body {
+  flex: 1 0 0;
+  min-width: 1px;
+  display: flex;
+  align-items: flex-start;
+  gap: 6.492px;
+}
+
+.wp-invest__alert-icon {
+  height: 10.82px;
+  display: flex;
+  align-items: center;
+  color: #e18308;
+}
+
+.wp-invest__alert-text {
+  flex: 1 0 0;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.164px;
+  line-height: 10.82px;
+}
+
+.wp-invest__alert-title {
+  font-size: 7.574px;
+  font-weight: 500;
+  color: #101828;
+}
+
+.wp-invest__alert-sub {
+  width: 278.077px;
+  font-size: 6.492px;
+  color: #475467;
+}
+
+.wp-invest__alert-link {
+  font-size: 7.574px;
+  font-weight: 600;
+  line-height: 10.82px;
+  color: #101828;
+  white-space: nowrap;
+}
+
+.wp-invest__alert-link--brand {
+  color: #e84606;
+}
+
+/* Tabs + filters */
+
+.wp-invest__toolbar {
+  height: 19.476px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wp-invest__toggle {
+  padding: 2.164px;
+  border-radius: 5.41px;
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  gap: 2.164px;
+}
+
+.wp-invest__toggle-item {
+  height: 15.148px;
+  padding: 4.328px 8.656px;
+  border-radius: 3.246px;
+  display: flex;
+  align-items: center;
+  font-size: 7.574px;
+  line-height: 7.574px;
+  color: #667085;
+  white-space: nowrap;
+}
+
+.wp-invest__toggle-item--active {
+  background: #fff;
+  box-shadow: 0 0.541px 1.623px 0 rgba(16, 24, 40, 0.1), 0 0.541px 1.082px 0 rgba(16, 24, 40, 0.06);
+  font-weight: 500;
+  line-height: 10.82px;
+  color: #101828;
+}
+
+.wp-invest__filters {
+  display: flex;
+  align-items: center;
+  gap: 6.492px;
+}
+
+.wp-invest__search {
+  width: 173.122px;
+  height: 19.476px;
+  padding: 5.41px 7.574px;
+  border: 0.541px solid #d0d5dd;
+  border-radius: 4.328px;
+  background: #fff;
+  box-shadow: 0 0.541px 1.082px 0 rgba(16, 24, 40, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 4.328px;
+  overflow: hidden;
+}
+
+.wp-invest__search-icon {
+  width: 10.82px;
+  display: flex;
+  justify-content: center;
+  color: #101828;
+}
+
+.wp-invest__search-text {
+  font-size: 8.656px;
+  line-height: 12.984px;
+  color: #d0d5dd;
+}
+
+.wp-invest__filter-set {
+  display: flex;
+  align-items: center;
+  gap: 4.328px;
+}
+
+.wp-invest__filter {
+  border: 0.541px solid #d0d5dd;
+  border-radius: 4.328px;
+  overflow: hidden;
+  display: flex;
+}
+
+.wp-invest__filter-base {
+  /* Figma strokes sit inside: outer group stays 19.476px tall. */
+  height: 18.394px;
+  padding: 0 6.492px;
+  border-right: 0.541px solid #d0d5dd;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 4.328px;
+  font-size: 7.574px;
+  line-height: 10.82px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.wp-invest__filter-base--sector {
+  width: 51.396px;
+  justify-content: space-between;
+}
+
+.wp-invest__currency {
+  display: flex;
+  align-items: center;
+  gap: 2.164px;
+  line-height: normal;
+}
+
+/* Deal cards */
+
+.wp-invest__deals {
+  width: 636.222px;
+  border-radius: 7.574px;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8.656px;
+}
+
+.wp-invest__deal {
+  width: 206.123px;
+  padding: 8.656px;
+  border: 0.541px solid #eaecf0;
+  border-radius: 8.656px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10.82px;
+}
+
+.wp-invest__deal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wp-invest__deal-id {
+  display: flex;
+  align-items: center;
+  gap: 4.328px;
+}
+
+.wp-invest__deal-names {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.082px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.wp-invest__deal-name {
+  font-family: var(--font-body);
+  font-size: 7.574px;
+  font-weight: 500;
+  color: #000;
+}
+
+.wp-invest__deal-type {
+  font-size: 6.492px;
+  color: #475467;
+}
+
+.wp-invest__badge {
+  padding: 1.082px 3.246px;
+  border-radius: 34.624px;
+  font-size: 5.41px;
+  font-weight: 500;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.wp-invest__badge--funded {
+  background: #f2f4f7;
+  color: #475467;
+}
+
+.wp-invest__badge--subscribing {
+  background: #fff3e6;
+  color: #e87c07;
+}
+
+.wp-invest__badge--open {
+  background: #e7f1fd;
+  color: #0a6ad9;
+}
+
+.wp-invest__deal-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.wp-invest__deal-target {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.164px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.wp-invest__deal-target-label {
+  font-size: 6.492px;
+  color: #475467;
+}
+
+.wp-invest__deal-target-value {
+  font-size: 10.82px;
+  font-weight: 600;
+  color: #000;
+}
+
+.wp-invest__deal-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2.164px;
+}
+
+.wp-invest__ring {
+  position: relative;
+  width: 17.312px;
+  height: 17.312px;
+}
+
+.wp-invest__ring-inner {
+  position: absolute;
+  left: calc(50% + 0.34px);
+  top: calc(50% + 0.34px);
+  width: 17.312px;
+  height: 17.312px;
+  transform: translate(-50%, -50%);
+}
+
+.wp-invest__ring-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.wp-invest__ring-line-box {
+  position: absolute;
+  inset: 4.69%;
+}
+
+.wp-invest__ring-line {
+  position: absolute;
+}
+
+/* Empty "Line" layer fills the ring box (inset 4.69%). */
+.wp-invest__ring-line--none {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wp-invest__ring-line--20,
+.wp-invest__ring-line--50 {
+  left: 44.83%;
+  top: -5.17%;
+}
+
+.wp-invest__ring-pct {
+  position: absolute;
+  left: calc(50% + 0.79px);
+  top: calc(50% - 2.36px);
+  transform: translateX(-50%);
+  font-size: 3.787px;
+  font-weight: 600;
+  line-height: 5.41px;
+  color: #101828;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.wp-invest__ring-pct--narrow {
+  left: calc(50% + 0.29px);
+}
+
+.wp-invest__raised {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.164px;
+  font-size: 6.492px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.wp-invest__raised-amount {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: #000;
+}
+
+.wp-invest__raised-label {
+  color: #475467;
+}

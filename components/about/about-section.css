@@ -1,0 +1,50 @@
+/* Shared shell for the About page's content sections (Figma: 100px side padding, 96px bottom). */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 100px 96px;
+  color: #181f1f;
+}
+
+.about-section__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 628px;
+}
+
+.about-section__heading {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.about-section__lede {
+  font-size: 16px;
+  line-height: normal;
+}
+
+@media (max-width: 1200px) {
+  .about-section {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+}
+
+@media (max-width: 720px) {
+  .about-section {
+    gap: 28px;
+    padding-bottom: 72px;
+  }
+  .about-section__heading {
+    font-size: 32px;
+  }
+}

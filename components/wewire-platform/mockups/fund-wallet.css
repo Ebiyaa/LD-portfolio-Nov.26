@@ -1,0 +1,257 @@
+/* Fund wallet mockup card (Figma 1001:16528), 501×400 design px. */
+.wp-wallet {
+  border-radius: 8px;
+}
+
+.wp-wallet__card {
+  position: relative;
+  width: 501px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fcfcfd;
+  font-family: var(--font-button);
+  font-style: normal;
+}
+
+.wp-wallet__card *,
+.wp-wallet__card *::before,
+.wp-wallet__card *::after {
+  box-sizing: border-box;
+}
+
+.wp-wallet__card p {
+  margin: 0;
+}
+
+.wp-wallet__border {
+  position: absolute;
+  inset: 0 0 0.07px 0;
+  border: 0.667px solid rgba(255, 255, 255, 0.1);
+  border-radius: 21.333px;
+}
+
+.wp-wallet__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Mockup frame: 348.81 wide at x=76 y=55.58, runs past the card bottom. */
+.wp-wallet__frame {
+  position: absolute;
+  left: 76px;
+  top: 55.58px;
+  width: 348.81px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 21.424px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  filter: drop-shadow(95.355px 0 23.839px rgba(0, 0, 0, 0.35));
+}
+
+.wp-wallet__intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5.356px;
+}
+
+.wp-wallet__title {
+  width: 100%;
+  font-family: var(--font-fraunces), serif;
+  font-variation-settings: "SOFT" 100, "opsz" 28;
+  font-weight: 400;
+  font-size: 24.102px;
+  line-height: 29.458px;
+  letter-spacing: -0.482px;
+  color: #000;
+}
+
+.wp-wallet__lead {
+  width: 100%;
+  font-size: 9.373px;
+  line-height: 13.39px;
+  font-weight: 400;
+  color: #475467;
+}
+
+.wp-wallet__field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4.017px;
+}
+
+.wp-wallet__label {
+  font-size: 9.373px;
+  line-height: 13.39px;
+  font-weight: 500;
+  color: #344054;
+  white-space: nowrap;
+}
+
+.wp-wallet__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5.356px;
+}
+
+.wp-wallet__row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10.712px;
+  padding: 8.034px 10.712px;
+  border: 0.67px solid #eaecf0;
+  border-radius: 8.034px;
+}
+
+.wp-wallet__row--active {
+  background: #f9fafb;
+}
+
+.wp-wallet__glyph {
+  position: relative;
+  flex-shrink: 0;
+  width: 19.75px;
+  height: 19.75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4.389px;
+  border: 0.274px solid #98a2b3;
+  border-radius: 9999px;
+  color: #98a2b3;
+}
+
+.wp-wallet__glyph-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 8.778px;
+  height: 8.778px;
+}
+
+.wp-wallet__text {
+  flex: 1 0 0;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.678px;
+}
+
+.wp-wallet__row-title {
+  width: 100%;
+  font-size: 9.373px;
+  line-height: 13.39px;
+  font-weight: 500;
+  color: #344054;
+}
+
+.wp-wallet__row-sub {
+  width: 100%;
+  font-size: 8.034px;
+  line-height: normal;
+  font-weight: 400;
+  color: #475467;
+}
+
+.wp-wallet__arrow {
+  display: block;
+  flex-shrink: 0;
+  width: 9.373px;
+  height: 9.373px;
+  color: #667085;
+}
+
+/* Small flag/logo badge overlapping the bottom-right of the round glyph. */
+.wp-wallet__badge {
+  position: absolute;
+  top: 23.43px;
+  left: 23.43px;
+  width: 9.373px;
+  height: 9.373px;
+}
+
+.wp-wallet__badge img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  max-width: none;
+}
+
+.wp-wallet__badge--us {
+  top: 22.76px;
+  left: 22.76px;
+}
+
+.wp-wallet__badge--eu {
+  border-radius: 15.231px;
+  overflow: hidden;
+}
+
+.wp-wallet__badge--eu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wp-wallet__badge--ghs {
+  left: 22.09px;
+  overflow: hidden;
+  border-radius: 11.081px;
+  background: #785aff;
+}
+
+.wp-wallet__badge .wp-wallet__ghs-a {
+  inset: auto;
+  top: 2.01px;
+  left: 2.01px;
+}
+
+.wp-wallet__ghs-b {
+  position: absolute;
+  top: 2.54px;
+  left: 3.14px;
+  width: 3.189px;
+  height: 3.912px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-wallet__ghs-b-inner {
+  position: relative;
+  flex: none;
+  width: 2.864px;
+  height: 3.776px;
+  transform: rotate(-3deg) scaleY(0.99) skewX(-8deg);
+}
+
+.wp-wallet__usdt {
+  position: absolute;
+  top: 12.61px;
+  left: 11.78px;
+  width: 9.373px;
+  height: 9.373px;
+  overflow: hidden;
+}
+
+.wp-wallet__usdt img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  max-width: none;
+}

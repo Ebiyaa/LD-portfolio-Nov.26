@@ -1,0 +1,382 @@
+/* Payment summary mockup card (Figma 1001:16461), 501×400 design px. */
+.wp-pay {
+  border-radius: 8px;
+}
+
+.wp-pay__card {
+  position: relative;
+  width: 501px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fcfcfd;
+  font-family: var(--font-button);
+  font-style: normal;
+}
+
+.wp-pay__card *,
+.wp-pay__card *::before,
+.wp-pay__card *::after {
+  box-sizing: border-box;
+}
+
+.wp-pay__card p {
+  margin: 0;
+}
+
+.wp-pay__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.wp-pay__border {
+  position: absolute;
+  inset: 0 0 0.07px 0;
+  border: 0.667px solid rgba(255, 255, 255, 0.1);
+  border-radius: 21.333px;
+}
+
+/* Mockup frame: 363.69 wide, bottom edge 59.5px above the card bottom (top runs past the card). */
+.wp-pay__frame {
+  position: absolute;
+  left: 69px;
+  bottom: 59.5px;
+  width: 363.686px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11.638px;
+  padding: 17.457px 14.547px;
+  background: #fff;
+  border: 0.727px solid #fff;
+  border-radius: 8.728px;
+  filter: drop-shadow(0 4px 25px rgba(0, 0, 0, 0.1));
+}
+
+/* Header */
+.wp-pay__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.819px;
+}
+
+.wp-pay__coin {
+  display: block;
+  width: 29.095px;
+  height: 29.095px;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.wp-pay__title {
+  font-size: 17.457px;
+  line-height: 23.276px;
+  color: #000;
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+
+.wp-pay__title-strong {
+  font-weight: 600;
+}
+
+.wp-pay__title-unit {
+  font-weight: 400;
+  color: #667085;
+}
+
+.wp-pay__to {
+  width: 303.314px;
+  text-align: center;
+  font-size: 10.183px;
+  line-height: 14.547px;
+  font-weight: 400;
+  color: #475467;
+}
+
+.wp-pay__to-name {
+  font-weight: 500;
+  color: #101828;
+}
+
+.wp-pay__rule {
+  width: 100%;
+  height: 0.727px;
+  flex-shrink: 0;
+  background: #eaecf0;
+}
+
+/* Body */
+.wp-pay__body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11.638px;
+}
+
+.wp-pay__summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 17.457px;
+  padding: 11.638px;
+  overflow: hidden;
+  background: #f9fafb;
+  border: 0.727px solid #eaecf0;
+  border-radius: 5.819px;
+}
+
+.wp-pay__top {
+  width: 312.77px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 17.457px;
+}
+
+.wp-pay__top-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 11.638px;
+}
+
+.wp-pay__pay {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5.819px;
+}
+
+.wp-pay__muted {
+  font-size: 10.183px;
+  line-height: 14.547px;
+  font-weight: 400;
+  color: #667085;
+  white-space: nowrap;
+}
+
+.wp-pay__muted--normal {
+  line-height: normal;
+}
+
+.wp-pay__amount-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wp-pay__amount {
+  display: flex;
+  align-items: center;
+  gap: 5.819px;
+}
+
+.wp-pay__amount img {
+  display: block;
+  flex-shrink: 0;
+}
+
+.wp-pay__amount-text {
+  font-size: 14.547px;
+  line-height: 14.547px;
+  font-weight: 600;
+  color: #101828;
+  white-space: nowrap;
+}
+
+.wp-pay__address {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8.728px;
+  font-size: 10.183px;
+  line-height: 14.547px;
+  font-weight: 400;
+  color: #101828;
+  white-space: nowrap;
+}
+
+.wp-pay__icon {
+  display: block;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+}
+
+.wp-pay__change-row {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.wp-pay__change {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.909px;
+  font-size: 10.183px;
+  line-height: 14.547px;
+  font-weight: 600;
+  color: #e84606;
+  white-space: nowrap;
+}
+
+.wp-pay__change .wp-pay__icon {
+  width: 0.7em;
+  height: 0.7em;
+}
+
+.wp-pay__progress {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5.819px;
+}
+
+.wp-pay__progress-label {
+  font-size: 10.183px;
+  line-height: normal;
+  font-weight: 600;
+  color: #101828;
+  white-space: nowrap;
+}
+
+.wp-pay__bar {
+  position: relative;
+  width: 100%;
+  height: 5.819px;
+  border-radius: 5.819px;
+}
+
+.wp-pay__bar-track,
+.wp-pay__bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5.819px;
+  border-radius: 9999px;
+}
+
+.wp-pay__bar-track {
+  background: #eaecf0;
+}
+
+.wp-pay__bar-fill {
+  background: #ff7139;
+}
+
+.wp-pay__divider {
+  position: relative;
+  width: 100%;
+  height: 0;
+  flex-shrink: 0;
+}
+
+.wp-pay__divider img {
+  position: absolute;
+  top: -0.36px;
+  left: 0;
+  display: block;
+  max-width: none;
+}
+
+.wp-pay__fees {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8.728px;
+}
+
+.wp-pay__fee {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 10.183px;
+  line-height: 14.547px;
+  font-weight: 400;
+  color: #667085;
+  white-space: nowrap;
+}
+
+.wp-pay__fee-value {
+  font-weight: 500;
+}
+
+.wp-pay__fee--total {
+  font-weight: 600;
+  color: #101828;
+}
+
+.wp-pay__status {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.909px;
+  padding: 11.638px;
+  overflow: hidden;
+  border: 0.727px solid #eaecf0;
+  border-radius: 5.819px;
+}
+
+.wp-pay__status-row {
+  display: flex;
+  align-items: center;
+  gap: 5.819px;
+  white-space: nowrap;
+  font-size: 10.183px;
+  line-height: normal;
+  font-weight: 500;
+  color: #101828;
+}
+
+.wp-pay__check {
+  display: block;
+  flex-shrink: 0;
+  width: 11.638px;
+  height: 11.638px;
+  color: #61be58;
+}
+
+.wp-pay__expire {
+  width: 100%;
+  text-align: center;
+  font-size: 8.728px;
+  line-height: normal;
+  font-weight: 400;
+  color: #667085;
+}
+
+.wp-pay__expire strong {
+  font-weight: 600;
+  color: #e84606;
+}
+
+/* Dark fade over the top of the card (Figma 1001:16527). */
+.wp-pay__fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 504px;
+  height: 87px;
+  opacity: 0.3;
+  background: linear-gradient(to bottom, #000 13.393%, rgba(0, 0, 0, 0) 95.977%);
+  pointer-events: none;
+}

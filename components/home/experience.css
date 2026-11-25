@@ -1,0 +1,122 @@
+/* "Relevant Work Experience" (Figma 1001:14026): intro left, 705-wide role list right. */
+.home-experience {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  color: #181f1f;
+}
+
+.home-experience__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 455px;
+  max-width: 100%;
+  min-height: 265.28px;
+}
+
+.home-experience__heading {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.home-experience__text {
+  font-size: 16px;
+  line-height: normal;
+}
+
+.home-experience__list {
+  display: flex;
+  flex: 0 1 705px;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--rule);
+}
+
+.home-experience__role {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--rule);
+}
+.home-experience__role:last-child {
+  padding-bottom: 20px;
+}
+
+.home-experience__who {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 1px;
+}
+
+.home-experience__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.8px;
+}
+
+.home-experience__company {
+  font-size: 20px;
+  line-height: 24px;
+  opacity: 0.6;
+}
+
+.home-experience__dates {
+  flex: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28.8px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .home-experience {
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  .home-experience__intro {
+    min-height: 0;
+    gap: 20px;
+  }
+  .home-experience__heading {
+    font-size: 32px;
+  }
+  .home-experience__list {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-experience__role {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .home-experience__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .home-experience__company,
+  .home-experience__dates {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .home-experience__dates {
+    text-align: left;
+  }
+}

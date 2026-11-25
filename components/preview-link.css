@@ -1,0 +1,33 @@
+.preview-link__warm {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preview-link__content {
+  z-index: 100;
+  transform-origin: var(--radix-hover-card-content-transform-origin);
+}
+
+.preview-link__card {
+  border-radius: 8px;
+}
+
+.preview-link__image-link {
+  display: block;
+  font-size: 0;
+}
+
+/* 200px wide like the reference; the height follows each picture so nothing is cropped. */
+.preview-link__image {
+  width: 200px;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}

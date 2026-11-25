@@ -1,0 +1,171 @@
+/* Home projects list (Figma 1001:12872): four 1384-wide rows, 96px apart. */
+.home-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+.home-projects__row {
+  display: block;
+  padding-top: 16px;
+  border-top: 1px solid rgba(24, 31, 31, 0.2);
+  color: #181f1f;
+  text-decoration: none;
+}
+
+.home-projects__content {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Left column: 528 wide, text block 455 wide, pinned to the bottom of a 265.28 min-height. */
+.home-projects__text {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 40px;
+  width: 528px;
+  min-height: 265.28px;
+  padding-right: 73px;
+}
+
+.home-projects__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.home-projects__description {
+  font-size: 16px;
+  line-height: normal;
+}
+
+.home-projects__tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.home-projects__chip {
+  line-height: normal;
+}
+
+/* Right column: the 856 × 694.34 visual (radius 8). */
+.home-projects__visual {
+  position: relative;
+  flex: 1 0 0;
+  min-width: 1px;
+  aspect-ratio: 856 / 694.34;
+  overflow: clip;
+  border-radius: 8px;
+  background: var(--rule);
+  container-type: inline-size;
+}
+
+.home-projects__media {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.home-projects__row--link:hover .home-projects__media,
+.home-projects__row--link:focus-visible .home-projects__media {
+  transform: scale(1.025);
+}
+
+/* Fixed Figma-size stage, scaled to the column: scale = column width / 856px. */
+.home-projects__stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 856px;
+  height: 694.34px;
+  transform-origin: 0 0;
+  scale: tan(atan2(100cqw, 856px));
+}
+
+/* Grainy gradient backgrounds (rotated in Figma; the files are pre-rotated). */
+.home-projects__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+.home-projects__bg--wewire {
+  inset: auto;
+  left: 0;
+  top: 1px;
+  width: 1308px;
+  height: 736px;
+}
+
+/* The Delegated Self film still: 693 × 406.41, radius 10. */
+.home-projects__photo {
+  position: absolute;
+  left: calc(50% + 0.5px);
+  top: calc(50% - 0.11px);
+  width: 693px;
+  height: 406.409px;
+  overflow: hidden;
+  border-radius: 10px;
+  translate: -50% -50%;
+}
+.home-projects__photo img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.home-projects__row--link:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1100px) {
+  .home-projects__text {
+    width: 40%;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-projects {
+    gap: 56px;
+  }
+  .home-projects__content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .home-projects__text {
+    width: 100%;
+    min-height: 0;
+    padding-right: 0;
+    gap: 20px;
+  }
+  .home-projects__title {
+    font-size: 32px;
+  }
+  .home-projects__visual {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-projects__row--link:hover .home-projects__media,
+  .home-projects__row--link:focus-visible .home-projects__media {
+    transform: none;
+  }
+}

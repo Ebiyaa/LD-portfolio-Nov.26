@@ -1,0 +1,26 @@
+.slider {
+  overflow: hidden;
+  cursor: grab;
+  /* Lenis leaves this alone, so a horizontal trackpad swipe doesn't fight the page scroll. */
+  touch-action: pan-y;
+}
+.slider:active {
+  cursor: grabbing;
+}
+
+.slider__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Keeps the duplicated items in the same flex row as the originals. */
+.slider__clone {
+  display: contents;
+}
+
+.slider img {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}

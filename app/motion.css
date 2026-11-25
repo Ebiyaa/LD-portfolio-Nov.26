@@ -1,0 +1,61 @@
+/* Site motion. Behaviour lives in components/motion/*; see Reveal.tsx for how elements are picked. */
+
+/* ---------- Text: blur-fade-rise on load and on scroll ---------- */
+
+/* Before hydration (set by the inline script in app/layout.tsx), hold back the first screen's
+   text so it doesn't flash in and then disappear. Reveal.tsx clears this straight away. */
+html[data-reveal-pending] :is(main, #connect) :is(h1, h2, h3, p, li, .hero-actions__buttons, .hero-actions__rating):not(:is(.home-mock, .cs-canvas, .slider, .preview-link__content) *) {
+  opacity: 0;
+}
+
+[data-reveal] {
+  transition:
+    opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    translate 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    filter 0.6s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  transition-delay: var(--reveal-delay, 0ms) !important;
+}
+[data-reveal="hidden"] {
+  opacity: 0;
+  translate: 0 20px;
+  filter: blur(8px);
+}
+
+/* ---------- Design snippets: settle into place as they scroll in ---------- */
+
+@supports (animation-timeline: view()) {
+  [data-snippet] {
+    animation: snippet-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 38%;
+  }
+}
+
+@keyframes snippet-in {
+  from {
+    opacity: 0;
+    translate: 0 72px;
+    scale: 0.94;
+    filter: blur(8px);
+  }
+  60% {
+    filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+    filter: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-snippet] {
+    animation: none;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    translate: none !important;
+    filter: none !important;
+  }
+}

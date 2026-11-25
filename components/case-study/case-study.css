@@ -1,0 +1,309 @@
+/* Case-study pages (Figma: content node at x=64 y=160, sidebar 365 + content 1019, sections 40px apart). */
+.cs-page {
+  display: grid;
+  grid-template-columns: minmax(240px, 365fr) minmax(0, 1019fr);
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 160px var(--gutter) 96px;
+  color: #181f1f;
+}
+
+/* ---------- Sidebar ---------- */
+.cs-sidebar {
+  min-width: 0;
+}
+
+.cs-sidebar__inner {
+  position: sticky;
+  top: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 24px;
+}
+
+.cs-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  font-size: 14px;
+  line-height: normal;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.cs-back:hover {
+  color: var(--ink);
+}
+.cs-back__icon {
+  flex: none;
+  transition: transform 0.2s ease;
+}
+.cs-back:hover .cs-back__icon {
+  transform: translateX(-2px);
+}
+
+.cs-sidebar__rule {
+  width: 170px;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: #e0e0e0;
+}
+
+.cs-toc__list {
+  display: flex;
+  flex-direction: column;
+  width: var(--cs-toc-width, 170px);
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-toc__link {
+  display: block;
+  height: 40px;
+  padding: 11px 0 11px 14px;
+  border-left: 1px solid #eaeaea;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--muted);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.cs-toc__link:hover {
+  color: #000;
+}
+.cs-toc__link[aria-current="location"] {
+  border-left: 2px solid #fd4d01;
+  font-weight: 600;
+  color: #000;
+}
+
+/* ---------- Content column ---------- */
+.cs-main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-width: 0;
+}
+
+.cs-header {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cs-header__top {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cs-header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cs-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.cs-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 19px; /* one empty line of 16px Inter Tight between paragraphs */
+  max-width: 748px;
+  font-size: 16px;
+  line-height: 19px; /* Figma "normal" for 16px Inter Tight */
+}
+
+.cs-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 680px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border: 1px solid #000;
+  border-radius: 9999px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.05px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.cs-rule {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: #e0e0e0;
+}
+
+.cs-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 56px;
+  margin: 0;
+}
+
+.cs-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cs-meta__label,
+.cs-meta__value {
+  margin: 0;
+  font-size: 16px;
+  line-height: 19px;
+}
+.cs-meta__label {
+  color: var(--muted);
+}
+.cs-meta__value {
+  font-weight: 500;
+  color: #181f1f;
+}
+
+/* ---------- Sections ---------- */
+.cs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scroll-margin-top: 120px;
+}
+
+.cs-section__title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+}
+.cs-section__title--large {
+  font-size: 30px;
+}
+
+.cs-section__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.cs-section__body strong {
+  font-weight: 700;
+}
+
+/* Inline emphasis inside intro/body copy */
+.cs-intro strong {
+  font-weight: 600;
+}
+
+/* Blue link (e.g. error code 402) */
+.cs-link-blue {
+  color: #2f80ed;
+}
+
+/* Paragraphs that share one Figma text box are an empty line (22px) apart. */
+.cs-paras {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Numbered lists (Figma: decimal, 24px indent, 12px between items) */
+.cs-list {
+  margin: 0;
+  padding-left: 24px;
+  list-style: decimal;
+  line-height: 22px;
+}
+.cs-list > li + li {
+  margin-top: 12px;
+}
+.cs-list strong {
+  font-weight: 600;
+}
+.cs-list--bold strong {
+  font-weight: 700;
+}
+
+/* ---------- Figures ---------- */
+.cs-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+}
+
+.cs-caption {
+  font-size: 14px;
+  line-height: normal;
+  font-style: italic;
+  color: #555759;
+}
+
+/* Mockup grid: one full-width card on top, two half cards below, 16px apart. */
+.cs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.cs-grid > :first-child {
+  grid-column: 1 / -1;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .cs-page {
+    display: block;
+    padding-top: 128px;
+    padding-bottom: 72px;
+  }
+  .cs-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .cs-title {
+    font-size: 36px;
+  }
+  .cs-meta {
+    gap: 20px 32px;
+  }
+  .cs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-back__icon,
+  .cs-back:hover .cs-back__icon {
+    transform: none;
+  }
+}

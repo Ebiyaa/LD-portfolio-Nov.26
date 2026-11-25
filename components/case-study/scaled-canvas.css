@@ -1,0 +1,15 @@
+.cs-canvas {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* Keep the scaled stage on its own layer so text stays crisp while scaling. */
+  isolation: isolate;
+}
+
+.cs-canvas__stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scale(var(--cs-scale, 1));
+  transform-origin: 0 0;
+}

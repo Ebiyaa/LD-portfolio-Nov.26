@@ -1,0 +1,109 @@
+.about-featured__list {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-featured__item {
+  flex: 1 0 0;
+  min-width: 1px;
+}
+
+.about-featured__card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Figma frame: 426.67 × 350 at 1512 wide, radius 5.138px. */
+.about-featured__frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 426.67 / 350;
+  overflow: hidden;
+  border-radius: 5.138px;
+  background: var(--rule);
+}
+
+/* Zoom layer, so each image's crop offset is kept while it scales about the frame's centre. */
+.about-featured__media {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.about-featured__card:hover .about-featured__media,
+.about-featured__card:focus-visible .about-featured__media {
+  transform: scale(1.05);
+}
+
+.about-featured__img {
+  position: absolute;
+  max-width: none;
+  object-fit: cover;
+}
+.about-featured__img--fill {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 646 × 350, right-aligned in the frame. */
+.about-featured__img--hackhive {
+  top: 0;
+  right: 0;
+  width: 151.406%;
+  height: 100%;
+}
+/* 734 × 618, centred in the frame. */
+.about-featured__img--fintech {
+  left: -36.016%;
+  top: -38.286%;
+  width: 172.031%;
+  height: 176.571%;
+}
+
+.about-featured__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.about-featured__card:hover .about-featured__title {
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 3px;
+}
+
+.about-featured__card:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+  .about-featured__list {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .about-featured__item {
+    flex: none;
+    width: 100%;
+  }
+  .about-featured__card {
+    gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-featured__card:hover .about-featured__media,
+  .about-featured__card:focus-visible .about-featured__media {
+    transform: none;
+  }
+}

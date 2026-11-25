@@ -1,0 +1,354 @@
+/* DealCard mockup (Figma 1001:15957), 501x400 design px. */
+.wp-deal {
+  border-radius: 8px;
+}
+
+.wp-deal *,
+.wp-deal *::before,
+.wp-deal *::after {
+  box-sizing: border-box;
+}
+
+.wp-deal p {
+  margin: 0;
+}
+
+.wp-deal__card {
+  position: relative;
+  width: 501px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fcfcfd;
+  font-family: var(--font-button);
+  font-style: normal;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.wp-deal__border {
+  position: absolute;
+  inset: 0 0 0.07px 0;
+  border: 0.667px solid rgba(255, 255, 255, 0.1);
+  border-radius: 21.333px;
+}
+
+.wp-deal__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.wp-deal__frame {
+  position: absolute;
+  left: 75px;
+  top: 50.4px;
+  width: 350.646px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Deal card */
+.wp-deal__deal {
+  width: 350.646px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18.407px;
+  padding: 14.725px;
+  background: #fff;
+  /* Figma strokes don't take layout space: draw them inside with an outline. */
+  outline: 0.92px solid #eaecf0;
+  outline-offset: -0.92px;
+  border-radius: 6.999px;
+  filter: drop-shadow(95.355px 0 23.839px rgba(0, 0, 0, 0.35));
+}
+
+.wp-deal__deal-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wp-deal__deal-id {
+  display: flex;
+  align-items: center;
+  gap: 7.363px;
+}
+
+.wp-deal__logo {
+  display: block;
+  flex-shrink: 0;
+  width: 29.449px;
+  height: 29.45px;
+  max-width: none;
+}
+
+.wp-deal__deal-names {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.841px;
+}
+
+.wp-deal__deal-name {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12.885px;
+  line-height: 16px;
+  color: #000;
+}
+
+.wp-deal__muted {
+  font-weight: 400;
+  font-size: 11.044px;
+  line-height: 13px;
+  color: #475467;
+}
+
+.wp-deal__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.841px 5.522px;
+  border-radius: 58.901px;
+  background: #ebf7ea;
+  font-weight: 500;
+  font-size: 9.203px;
+  line-height: 11px;
+  color: #107e4b;
+}
+
+.wp-deal__deal-bottom {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.wp-deal__target {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3.681px;
+}
+
+.wp-deal__target-value {
+  font-weight: 600;
+  font-size: 18.407px;
+  line-height: 22px;
+  color: #000;
+}
+
+.wp-deal__progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3.681px;
+}
+
+.wp-deal__ring {
+  position: relative;
+  width: 29.451px;
+  height: 29.451px;
+  flex-shrink: 0;
+}
+
+.wp-deal__ring-img {
+  position: absolute;
+  left: 0.27px;
+  top: 0.27px;
+  display: block;
+  width: 29.4506px;
+  height: 29.4506px;
+  max-width: none;
+}
+
+.wp-deal__ring-label {
+  position: absolute;
+  left: calc(50% + 0.27px + 0.37px);
+  top: calc(50% + 0.27px - 4.33px);
+  transform: translateX(-50%);
+  font-weight: 600;
+  font-size: 6.442px;
+  line-height: 9.203px;
+  color: #101828;
+  text-align: center;
+}
+
+.wp-deal__raised {
+  display: flex;
+  align-items: flex-start;
+  gap: 3.681px;
+  font-size: 11.044px;
+  line-height: 13px;
+}
+
+.wp-deal__raised-value {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: #000;
+}
+
+.wp-deal__raised .wp-deal__muted {
+  font-size: 11.044px;
+}
+
+/* Repayment summary */
+.wp-deal__summary {
+  width: 350.646px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16.797px;
+  padding: 16.797px;
+  overflow: hidden;
+  background: #fff;
+  outline: 0.7px solid #eaecf0;
+  outline-offset: -0.7px;
+  border-radius: 6.999px;
+  box-shadow: 95.355px 0 47.677px 0 rgba(0, 0, 0, 0.35);
+}
+
+.wp-deal__summary-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16.797px;
+  overflow: hidden;
+}
+
+.wp-deal__total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5.599px;
+}
+
+.wp-deal__total-label {
+  font-weight: 400;
+  font-size: 9.799px;
+  line-height: 12px;
+  color: #667085;
+}
+
+.wp-deal__total-value {
+  font-weight: 600;
+  font-size: 16.797px;
+  line-height: 20px;
+  color: #101828;
+}
+
+.wp-deal__total-cents {
+  color: #98a2b3;
+}
+
+.wp-deal__repaid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5.599px;
+}
+
+.wp-deal__repaid-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 9.799px;
+  line-height: 12px;
+  color: #475467;
+}
+
+.wp-deal__repaid-row strong {
+  font-weight: 600;
+  color: #101828;
+}
+
+.wp-deal__bar {
+  width: 100%;
+  height: 8.399px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 5.599px;
+  background: #eaecf0;
+}
+
+.wp-deal__bar-fill {
+  flex-shrink: 0;
+  width: 125.281px;
+  height: 23.096px;
+  background: #ff4d07;
+}
+
+.wp-deal__next {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8.399px;
+  border-radius: 5.599px;
+  background: #fcf3e6;
+}
+
+.wp-deal__next-row {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.wp-deal__next-info {
+  display: flex;
+  align-items: center;
+  gap: 4.199px;
+  font-size: 9.799px;
+  line-height: 13.998px;
+}
+
+.wp-deal__next-label {
+  font-weight: 400;
+  color: #475467;
+}
+
+.wp-deal__next-amount {
+  font-weight: 600;
+  color: #101828;
+}
+
+.wp-deal__next-link {
+  display: flex;
+  align-items: center;
+  gap: 5.599px;
+  line-height: 12.598px;
+  color: #e84606;
+}
+
+.wp-deal__next-link-text {
+  font-weight: 500;
+  font-size: 8.399px;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: from-font;
+  text-underline-position: from-font;
+}
+
+.wp-deal__next-link-icon {
+  display: block;
+  flex-shrink: 0;
+}

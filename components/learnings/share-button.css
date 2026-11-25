@@ -1,0 +1,51 @@
+.ln-share {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.ln-share:hover {
+  opacity: 0.6;
+}
+.ln-share:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.ln-share__icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* "Copied" bubble to the right of the icon. */
+.ln-share__status {
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 50%;
+  padding: 2px 8px;
+  border-radius: 30px;
+  background: var(--ink);
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 16.8px;
+  color: var(--card);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-4px, -50%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.ln-share__status.is-visible {
+  opacity: 1;
+  transform: translate(0, -50%);
+}

@@ -1,0 +1,286 @@
+/* The Delegated Self page. Shared layout lives in components/case-study/case-study.css. */
+
+.ds-page {
+  padding-bottom: 64px; /* Figma: photo strip sits 64px under the content */
+}
+
+/* "Background": header + hero photo, 40px apart like the rest of the column */
+.ds-background {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  scroll-margin-top: 120px;
+}
+
+.ds-hero {
+  position: relative;
+  aspect-ratio: 1019 / 600;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card);
+}
+.ds-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Cards (white, 8px radius) ---------- */
+.ds-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* The two live precedents */
+.ds-precedents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ds-precedent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 500px;
+  padding: 24px 20px;
+}
+
+.ds-precedent__title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 22px;
+  color: #181f1f;
+}
+
+.ds-precedent__media {
+  position: relative;
+  flex: 1 0 206px;
+  min-height: 206px;
+}
+.ds-precedent__media--rounded {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.ds-precedent__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ds-precedent__text {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #181f1f;
+}
+.ds-precedent__text strong {
+  font-weight: 700;
+}
+
+/* Blue-bar pull quote */
+.ds-quote {
+  margin: 24px 0 0; /* 16px section gap + 24 = 40px from the copy above */
+  padding: 16px 20px;
+  border-left: 5px solid #004ad4;
+}
+.ds-quote p {
+  max-width: 769px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: normal;
+  color: #000;
+}
+
+.ds-after-quote {
+  margin-top: 24px;
+}
+
+/* ---------- Photo tiles ---------- */
+.ds-tile {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--card);
+}
+.ds-tile img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* Process photos: 328 / 329 / 328 on top, 500 / 500 below (Figma 1001:16948) */
+.ds-photos {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+}
+.ds-photos__third {
+  grid-column: span 2;
+  aspect-ratio: 329 / 300; /* 3 tiles of ~328px share a 6-column grid */
+}
+.ds-photos__half {
+  grid-column: span 3;
+  aspect-ratio: 500 / 300;
+}
+
+/* Diagram cards */
+.ds-diagrams {
+  margin-top: 24px; /* 16px section gap + 24 = 40px under the copy */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.ds-diagram {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 24px 20px;
+}
+.ds-diagram figcaption {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #181f1f;
+}
+.ds-diagram img {
+  width: 100%;
+  height: auto;
+}
+
+/* Film still (Figma stretches the 2521×1440 still to fill 1019×500) */
+.ds-film {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 1019 / 500;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+.ds-film img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* "Watch Estate Mode" link, above the booth photo and under the film still */
+.ds-watch {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #181f1f;
+  text-decoration: none;
+}
+/* 16px from the image instead of the column's 40px gap (set in the browser check). */
+.ds-watch--below {
+  margin-top: -24px;
+}
+.ds-watch--above {
+  margin-bottom: var(--ds-watch-pull, -24px);
+}
+.ds-watch__icon {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  color: #ff0000;
+}
+.ds-watch__label {
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-position: from-font;
+}
+.ds-watch:hover .ds-watch__label {
+  text-decoration-thickness: 2px;
+}
+
+/* Limitations: list follows the intro with no gap; guidelines: 12px gap */
+.ds-tight,
+.ds-gap-12 {
+  display: flex;
+  flex-direction: column;
+}
+.ds-gap-12 {
+  gap: 12px;
+}
+
+/* Figma text width for the first section's copy */
+.ds-measure {
+  max-width: 947px;
+}
+
+/* ---------- Photo strip: slow endless carousel across the window, faded at the edges ---------- */
+.ds-strip {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.ds-strip__slider {
+  mask-image: linear-gradient(90deg, transparent, #000 var(--gutter), #000 calc(100% - var(--gutter)), transparent);
+}
+
+.ds-strip__tile {
+  flex: none;
+  width: 300px;
+  height: 300px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .ds-page {
+    padding-bottom: 56px;
+  }
+}
+
+@media (max-width: 720px) {
+  .ds-precedents,
+  .ds-diagrams {
+    grid-template-columns: 1fr;
+  }
+  .ds-precedent {
+    min-height: 0;
+  }
+  .ds-precedent__media {
+    flex: none;
+    aspect-ratio: 461 / 206;
+    min-height: 0;
+  }
+  .ds-photos {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .ds-photos__third,
+  .ds-photos__half {
+    grid-column: auto;
+    aspect-ratio: 1;
+  }
+  .ds-photos__half:last-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 500 / 300;
+  }
+  .ds-quote p {
+    font-size: 20px;
+  }
+  .ds-strip__tile {
+    width: 240px;
+    height: 240px;
+  }
+}

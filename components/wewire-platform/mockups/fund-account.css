@@ -1,0 +1,468 @@
+/* Fund USD account mockup card (Figma 1001:16275), laid out in design px (1019×400). */
+
+.wp-fund {
+  border-radius: 8px;
+  background: #fcfcfd;
+  font-family: var(--font-button);
+}
+
+.wp-fund p {
+  margin: 0;
+}
+
+.wp-fund img {
+  display: block;
+  max-width: none;
+}
+
+.wp-fund__border {
+  position: absolute;
+  inset: 0 0 0.07px 0;
+  border: 0.667px solid rgba(255, 255, 255, 0.1);
+  border-radius: 21.333px;
+}
+
+.wp-fund__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1019px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Bottom shade (Figma 1001:16460): black 20 %, flipped so it is darkest at the bottom. */
+.wp-fund__shade {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1019px;
+  height: 87px;
+  background: linear-gradient(to top, #000 13.393%, rgba(0, 0, 0, 0) 95.977%);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* ---------- Modal ---------- */
+
+.wp-fund__modal {
+  position: absolute;
+  left: 134px;
+  top: 70px;
+  width: 751.381px;
+  height: 488px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 9.186px;
+  box-shadow: 0 3.674px 45.928px 0 rgba(0, 0, 0, 0.1);
+  color: #101828;
+}
+
+.wp-fund__nav {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: 604.285px;
+  height: 47.707px;
+  padding: 11.927px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 7.951px;
+}
+
+.wp-fund__steps {
+  display: flex;
+  align-items: center;
+  gap: 9.939px;
+  height: 23.853px;
+}
+
+.wp-fund__step {
+  display: flex;
+  align-items: center;
+  gap: 4.969px;
+  font-size: 6.957px;
+  line-height: 9.939px;
+  white-space: nowrap;
+}
+
+.wp-fund__chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9.939px;
+  height: 9.939px;
+  font-size: 4.969px;
+}
+
+.wp-fund__badge {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.951px;
+  height: 7.951px;
+  padding: 0.994px 1.988px;
+  border-radius: 31.804px;
+  background: #ff4d07;
+  filter: drop-shadow(0 0.497px 0.497px rgba(16, 24, 40, 0.05));
+  color: #fff;
+  font-size: 4.969px;
+  font-weight: 500;
+  line-height: 6.957px;
+}
+
+.wp-fund__close {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19.878px;
+  height: 19.878px;
+  padding: 3.976px;
+  border-radius: 3.976px;
+  overflow: hidden;
+}
+
+/* ---------- Content ---------- */
+
+.wp-fund__content {
+  position: absolute;
+  left: 50%;
+  top: 69.57px;
+  transform: translateX(-50%);
+  width: 580.432px;
+  display: flex;
+  align-items: flex-start;
+  gap: 11.927px;
+}
+
+.wp-fund__col {
+  flex: 1 0 0;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15.902px;
+}
+
+.wp-fund__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 7.951px;
+  width: 259.405px;
+}
+
+.wp-fund__head-text {
+  flex: 1 0 0;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.976px;
+}
+
+.wp-fund__title {
+  font-family: var(--font-fraunces), serif;
+  font-variation-settings: "SOFT" 100, "opsz" 28;
+  font-size: 17.89px;
+  line-height: 21.866px;
+  letter-spacing: -0.3578px;
+  color: #000;
+}
+
+.wp-fund__sub {
+  font-size: 6.957px;
+  line-height: 9.939px;
+  color: #475467;
+}
+
+.wp-fund__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 15.902px;
+  width: 100%;
+}
+
+.wp-fund__left {
+  flex: 1 0 0;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 11.927px;
+}
+
+.wp-fund__field,
+.wp-fund__upload-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.wp-fund__field {
+  gap: 2.982px;
+}
+
+.wp-fund__upload-field {
+  gap: 3.976px;
+}
+
+.wp-fund__label {
+  font-size: 6.957px;
+  font-weight: 500;
+  line-height: 9.939px;
+  color: #344054;
+  white-space: nowrap;
+}
+
+.wp-fund__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.976px;
+  width: 100%;
+}
+
+.wp-fund__card {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 7.951px;
+  width: 100%;
+  padding: 5.963px 7.951px;
+  border: 0.497px solid #eaecf0;
+  border-radius: 5.963px;
+}
+
+.wp-fund__card--active {
+  background: #f9fafb;
+}
+
+.wp-fund__card-icon {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14.66px;
+  height: 14.66px;
+  border: 0.204px solid #98a2b3;
+  border-radius: 50%;
+  color: #98a2b3;
+  font-size: 7.2px;
+}
+
+.wp-fund__card-text {
+  flex: 1 0 0;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.988px;
+}
+
+.wp-fund__card-title {
+  font-size: 6.957px;
+  font-weight: 500;
+  line-height: 9.939px;
+  color: #344054;
+}
+
+.wp-fund__card-sub {
+  font-size: 5.963px;
+  line-height: normal;
+  color: #475467;
+}
+
+.wp-fund__radio {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: relative;
+  width: 7.951px;
+  height: 7.951px;
+  margin-top: 0.994px;
+  border: 0.497px solid #d0d5dd;
+  border-radius: 50%;
+}
+
+.wp-fund__radio--on {
+  border: 0;
+  background: #ff4d07;
+}
+
+.wp-fund__radio--on::after {
+  content: "";
+  position: absolute;
+  inset: 31.25%;
+  border-radius: 50%;
+  background: #fff;
+}
+
+/* Virtual account banner */
+.wp-fund__banner {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 15.902px;
+  width: 100%;
+  height: 74.542px;
+  padding: 9.939px 11.927px;
+  overflow: hidden;
+  background: #e7f1fd;
+  border: 0.497px solid #f6f6f6;
+  border-radius: 6.957px;
+}
+
+.wp-fund__bank {
+  position: absolute;
+  left: 156.04px;
+  top: -10.44px;
+}
+
+.wp-fund__banner-text {
+  position: relative;
+  flex-shrink: 0;
+  width: 95.91px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.976px;
+}
+
+.wp-fund__banner-title {
+  width: 80.505px;
+  font-family: var(--font-display);
+  font-size: 7.951px;
+  line-height: normal;
+  color: #101828;
+}
+
+.wp-fund__banner-sub {
+  font-size: 6.957px;
+  line-height: 9.939px;
+  color: #475467;
+}
+
+.wp-fund__banner-link {
+  display: flex;
+  align-items: center;
+  gap: 1.8px;
+  font-size: 6.957px;
+  font-weight: 500;
+  line-height: normal;
+  color: #155eef;
+  white-space: nowrap;
+}
+
+.wp-fund__banner-link svg {
+  font-size: 6px;
+}
+
+/* Right column */
+.wp-fund__right {
+  flex: 1 0 0;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 15.902px;
+}
+
+.wp-fund__upload {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9.939px;
+  width: 282.265px;
+  height: 90.444px;
+  padding: 11.927px 6.957px;
+  border: 0.497px dashed #d0d5dd;
+  border-radius: 5.963px;
+}
+
+.wp-fund__cloud {
+  flex-shrink: 0;
+  width: 11.927px;
+  height: 9.939px;
+  color: #000;
+  font-size: 11.927px;
+}
+
+.wp-fund__upload-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.988px;
+  width: 100%;
+  text-align: center;
+}
+
+.wp-fund__upload-title {
+  width: 100%;
+  font-size: 6.957px;
+  line-height: 9.939px;
+  color: #000;
+}
+
+.wp-fund__upload-hint {
+  width: 100%;
+  font-size: 5.963px;
+  line-height: 6.957px;
+  color: #667085;
+}
+
+.wp-fund__browse {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 17.89px;
+  padding: 3.976px 5.963px;
+  background: #fff;
+  border: 0.497px solid #d0d5dd;
+  border-radius: 3.976px;
+  font-size: 6.957px;
+  font-weight: 500;
+  line-height: 9.939px;
+  color: #344054;
+  white-space: nowrap;
+}
+
+.wp-fund__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7.951px;
+  width: 100%;
+}
+
+.wp-fund__btn {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 282.265px;
+  height: 21.866px;
+  padding: 6.957px 7.951px;
+  border-radius: 3.976px;
+  font-size: 6.957px;
+  line-height: 9.939px;
+  white-space: nowrap;
+}
+
+.wp-fund__btn--primary {
+  background: #ff4d07;
+  opacity: 0.4;
+  color: #fff;
+  font-weight: 600;
+}
+
+.wp-fund__btn--secondary {
+  background: #fff;
+  border: 0.497px solid #d0d5dd;
+  color: #344054;
+  font-weight: 500;
+}

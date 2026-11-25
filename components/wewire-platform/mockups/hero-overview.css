@@ -1,0 +1,1077 @@
+/* WeWire hero mockup card (Figma 1001:14528), laid out in design px inside ScaledCanvas. */
+
+.wp-hero {
+  border-radius: 8px;
+  background: #f86a1f;
+}
+
+.wp-hero *,
+.wp-hero *::before,
+.wp-hero *::after {
+  box-sizing: border-box;
+}
+
+.wp-hero p {
+  margin: 0;
+}
+
+.wp-hero img {
+  display: block;
+  max-width: none;
+}
+
+/* Background photo: 736×1308 image rotated -90° into a 1308×736 box centred on the card. */
+.wp-hero__bg {
+  position: absolute;
+  left: -144px;
+  top: -67.34px;
+  width: 1308px;
+  height: 736px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-hero__bg img {
+  flex: none;
+  width: 736px;
+  height: 1308px;
+  object-fit: cover;
+  transform: rotate(-90deg);
+}
+
+/* "Overview" dashboard frame */
+.wp-hero__frame {
+  position: absolute;
+  left: 163.394px;
+  top: 74.8px;
+  width: 692.872px;
+  height: 450px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-button);
+  font-style: normal;
+  font-weight: 400;
+  color: #101828;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wp-hero__block {
+  display: block;
+}
+
+/* Hairline SVGs (0.458px tall) are dropped by Chrome at their intrinsic height, so they get a
+   2px box and are painted at intrinsic size, centred (attributes unchanged). */
+.wp-hero .wp-hero__hair {
+  height: 2px;
+  object-fit: none;
+}
+
+.wp-hero .wp-hero__divider {
+  margin: -0.771px 0;
+}
+
+/* ---------- Sidebar ---------- */
+.wp-hero__side {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 124.644px;
+  height: 450px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wp-hero__side-top {
+  width: 100%;
+  padding: 0 7.332px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7.332px;
+}
+
+.wp-hero__side-head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wp-hero__logo-row {
+  height: 36.66px;
+  padding: 3.666px 9.165px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-hero__logo {
+  position: relative;
+  width: 61.606px;
+  height: 10.998px;
+  overflow: hidden;
+}
+
+.wp-hero__logo-mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.wp-hero__logo-text {
+  position: absolute;
+  left: 19.732px;
+  top: 1.36px;
+}
+
+.wp-hero__side-rule {
+  width: 100%;
+  height: 0.458px;
+  flex: none;
+  background: #f2f4f7;
+}
+
+.wp-hero__account {
+  width: 100%;
+  padding: 0 5.499px;
+  display: flex;
+  align-items: center;
+  gap: 5.499px;
+}
+
+.wp-hero__avatar {
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.wp-hero__account-text {
+  flex: 1 0 0;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.833px;
+  font-size: 6.415px;
+}
+
+.wp-hero__account-name {
+  width: 40.326px;
+  line-height: 9.165px;
+  color: #475467;
+}
+
+.wp-hero__account-bal {
+  font-weight: 600;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.wp-hero__menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.833px;
+}
+
+.wp-hero__item {
+  width: 109.98px;
+  padding: 3.666px 5.499px;
+  border-radius: 3.666px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 3.666px;
+  font-size: 6.415px;
+  line-height: 9.165px;
+  color: #475467;
+  white-space: nowrap;
+}
+
+.wp-hero__item--active {
+  padding-right: 1.833px;
+  background: #f9fafb;
+  font-weight: 500;
+  color: #101828;
+}
+
+.wp-hero__item-icon {
+  width: 9.165px;
+  height: 9.165px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475467;
+}
+
+.wp-hero__item--active .wp-hero__item-icon {
+  color: #ff4d07;
+}
+
+.wp-hero__item-icon svg {
+  width: 6.415px;
+  height: 6.415px;
+}
+
+.wp-hero__side-bottom {
+  width: 100%;
+  padding: 5.499px 7.332px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9.165px;
+}
+
+.wp-hero__promo {
+  width: 100%;
+  padding: 7.332px;
+  border-radius: 3.666px;
+  background: #f6f8fa;
+  display: flex;
+  align-items: flex-start;
+  gap: 7.332px;
+}
+
+.wp-hero__promo-icon {
+  flex: none;
+  padding: 5.499px;
+  border-radius: 29.328px;
+  background: #fff;
+  filter: drop-shadow(0 0.458px 0.458px rgba(16, 24, 40, 0.05));
+  display: flex;
+  color: #101828;
+}
+
+.wp-hero__promo-icon svg {
+  width: 9.165px;
+  height: 9.165px;
+}
+
+.wp-hero__promo-text {
+  flex: 1 0 0;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.833px;
+  line-height: 9.165px;
+}
+
+.wp-hero__promo-title {
+  padding-right: 10.998px;
+  font-size: 6.415px;
+  font-weight: 500;
+}
+
+.wp-hero__promo-sub {
+  font-size: 5.499px;
+  color: #475467;
+}
+
+/* ---------- Main column ---------- */
+.wp-hero__main {
+  position: absolute;
+  left: 124.64px;
+  top: 0;
+  padding-top: 14.664px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16.497px;
+}
+
+.wp-hero__page-head {
+  width: 568.228px;
+  padding: 0 14.664px;
+  display: flex;
+  flex-direction: column;
+  gap: 9.165px;
+}
+
+.wp-hero__title-row {
+  height: 23.371px;
+  display: flex;
+  align-items: center;
+  gap: 7.332px;
+}
+
+.wp-hero__title {
+  flex: 1 0 0;
+  min-width: 1px;
+  font-size: 10.998px;
+  font-weight: 500;
+  line-height: 14.664px;
+}
+
+.wp-hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 3.666px;
+  font-size: 6.415px;
+  line-height: 9.165px;
+  white-space: nowrap;
+}
+
+/* Buttons carry two empty icon slots (zero width) separated by 3.666px gaps. */
+.wp-hero__btn {
+  height: 16.497px;
+  padding: 3.666px 9.165px;
+  border: 0.458px solid #d0d5dd;
+  border-radius: 3.666px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #344054;
+}
+
+.wp-hero__btn--primary {
+  border: 0;
+  background: #ff4d07;
+  color: #fff;
+}
+
+.wp-hero__body {
+  width: 568.228px;
+  padding: 0 14.664px 14.664px;
+  border-radius: 5.499px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7.332px;
+}
+
+.wp-hero__top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.wp-hero__card {
+  border: 0.458px solid #eaecf0;
+  border-radius: 5.499px;
+}
+
+/* Balance card */
+.wp-hero__balance {
+  flex: 1 0 0;
+  min-width: 1px;
+  padding: 9.165px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10.998px;
+}
+
+.wp-hero__balance-section {
+  display: flex;
+  flex-direction: column;
+  gap: 7.332px;
+}
+
+.wp-hero__balance-head {
+  height: 39.409px;
+  padding: 0 1.833px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.wp-hero__balance-left {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 3.666px;
+}
+
+.wp-hero__muted-row {
+  display: flex;
+  align-items: center;
+  gap: 3.666px;
+  font-size: 6.415px;
+  white-space: nowrap;
+}
+
+.wp-hero__placeholder {
+  font-size: 6.415px;
+  line-height: normal;
+  color: #667085;
+}
+
+.wp-hero__eye {
+  width: 6.415px;
+  height: 6.415px;
+  color: #667085;
+}
+
+.wp-hero__big {
+  font-size: 21.996px;
+  font-weight: 600;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.wp-hero__cents {
+  color: #98a2b3;
+}
+
+.wp-hero__btn-group {
+  flex: none;
+  border: 0.458px solid #eaecf0;
+  border-radius: 3.666px;
+  overflow: hidden;
+  display: flex;
+}
+
+.wp-hero__btn-group-item {
+  height: 16.497px;
+  padding: 0 5.499px;
+  border-right: 0.458px solid #d0d5dd;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 3.666px;
+  font-size: 6.415px;
+  line-height: 9.165px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.wp-hero__btn-group-item svg {
+  width: 6.415px;
+  height: 6.415px;
+}
+
+.wp-hero__sub-stats {
+  display: flex;
+  align-items: flex-start;
+  gap: 3.666px;
+  font-size: 6.415px;
+  line-height: 9.165px;
+  white-space: nowrap;
+}
+
+.wp-hero__sub-stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.833px;
+}
+
+.wp-hero__quart {
+  color: #667085;
+}
+
+.wp-hero__strong {
+  font-weight: 500;
+  color: #101828;
+}
+
+.wp-hero__dot {
+  width: 3.208px;
+  height: 6.874px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 9.165px;
+  line-height: 9.165px;
+  color: #667085;
+}
+
+.wp-hero__hline,
+.wp-hero__rule {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+  flex: none;
+}
+
+.wp-hero__hline img {
+  position: absolute;
+  left: 0;
+  top: -1.229px;
+}
+
+.wp-hero__rule img {
+  position: absolute;
+  left: 0;
+  top: -1px;
+}
+
+.wp-hero__limit {
+  display: flex;
+  flex-direction: column;
+  gap: 3.666px;
+}
+
+.wp-hero__limit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+.wp-hero__tertiary {
+  font-size: 6.415px;
+  line-height: normal;
+  color: #475467;
+}
+
+.wp-hero__limit-bar {
+  height: 5.499px;
+  border-radius: 3.666px;
+  overflow: hidden;
+  background: #eaecf0;
+  display: flex;
+  align-items: center;
+}
+
+.wp-hero__limit-bar span {
+  flex: none;
+  width: 22.912px;
+  height: 15.122px;
+  background: #ff4d07;
+}
+
+.wp-hero__limit-reset {
+  display: flex;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+
+/* Chart */
+.wp-hero__chart-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5.499px;
+}
+
+.wp-hero__chart {
+  position: relative;
+  height: 110.438px;
+}
+
+.wp-hero__axis {
+  position: absolute;
+  left: 5.5px;
+  top: 8.71px;
+  width: 308.401px;
+  height: 101.731px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wp-hero__x-axis {
+  padding: 0 5.499px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 5.499px;
+  line-height: 8.248px;
+  color: #475467;
+  text-align: center;
+}
+
+.wp-hero__x-axis span {
+  flex: none;
+  width: 18.788px;
+  white-space: nowrap;
+}
+
+.wp-hero__vline {
+  position: absolute;
+  left: 109.06px;
+  top: 19.25px;
+  width: 0;
+  height: 86.609px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-hero__vline img {
+  flex: none;
+  transform: rotate(90deg);
+}
+
+.wp-hero__tooltip {
+  position: absolute;
+  left: 74.29px;
+  top: 4.13px;
+  width: 69.654px;
+  background: #fff;
+  display: flex;
+}
+
+.wp-hero__tooltip-badge {
+  flex: 1 0 0;
+  min-width: 1px;
+  padding: 3.666px;
+  border: 0.458px solid #f2f4f7;
+  border-radius: 1.833px;
+  background: #fff;
+  filter: drop-shadow(0 0.458px 0.458px rgba(16, 24, 40, 0.05));
+  mix-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.666px;
+  font-size: 4.582px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.wp-hero__tooltip-strong {
+  font-weight: 500;
+  color: #101828;
+}
+
+.wp-hero__tooltip-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wp-hero__tooltip-label {
+  width: 22.912px;
+  color: #667085;
+}
+
+/* Wallets */
+.wp-hero__wallets {
+  flex: none;
+  width: 206.212px;
+  height: 213.086px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 9.165px;
+}
+
+.wp-hero__wallets-head {
+  padding-left: 7.332px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wp-hero__wallets-title {
+  display: flex;
+  align-items: center;
+  gap: 3.666px;
+}
+
+.wp-hero__h3 {
+  font-size: 7.332px;
+  font-weight: 500;
+  line-height: 10.998px;
+  white-space: nowrap;
+}
+
+.wp-hero__h3--semi {
+  font-weight: 600;
+}
+
+.wp-hero__refresh {
+  display: flex;
+  align-items: center;
+  gap: 2.749px;
+  font-size: 5.499px;
+  line-height: normal;
+  color: #667085;
+  white-space: nowrap;
+}
+
+.wp-hero__refresh svg {
+  width: 5.499px;
+  height: 5.499px;
+}
+
+.wp-hero__link {
+  font-size: 5.499px;
+  font-weight: 500;
+  line-height: normal;
+  color: #e84606;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
+  white-space: nowrap;
+}
+
+.wp-hero__wallets-body {
+  padding-left: 7.332px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 7.332px;
+}
+
+.wp-hero__wallet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.666px;
+}
+
+.wp-hero__wallet {
+  padding: 7.332px 10.998px;
+  border: 0.458px solid #eaecf0;
+  border-radius: 5.499px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wp-hero__wallet-left,
+.wp-hero__wallet-right {
+  display: flex;
+  align-items: center;
+}
+
+.wp-hero__wallet-left {
+  gap: 5.499px;
+}
+
+.wp-hero__wallet-right {
+  gap: 2.749px;
+}
+
+.wp-hero__wallet-code,
+.wp-hero__wallet-amount {
+  font-size: 6.415px;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.wp-hero__wallet-amount {
+  font-weight: 500;
+  text-align: right;
+}
+
+.wp-hero__wallet-chev {
+  width: 2.749px;
+  height: 6.874px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-hero__wallet-chev img,
+.wp-hero__deal-chev {
+  flex: none;
+  transform: rotate(-90deg);
+}
+
+.wp-hero__open-wallet {
+  padding: 7.332px 10.998px;
+  border: 0.458px dashed #eaecf0;
+  border-radius: 5.499px;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.833px;
+  line-height: 9.165px;
+  white-space: nowrap;
+}
+
+.wp-hero__open-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.833px;
+  font-size: 6.415px;
+  font-weight: 600;
+  color: #475467;
+}
+
+.wp-hero__open-btn svg {
+  width: 6.415px;
+  height: 6.415px;
+  stroke-width: 3;
+}
+
+.wp-hero__open-sub {
+  font-size: 5.499px;
+  color: #667085;
+}
+
+/* Stats strip */
+.wp-hero__stats {
+  width: 100%;
+  height: 53.615px;
+  padding: 9.165px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 14.664px;
+}
+
+.wp-hero__stat {
+  flex: 1 0 0;
+  min-width: 1px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.666px;
+  white-space: nowrap;
+}
+
+.wp-hero__stat-value {
+  font-size: 9.165px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.wp-hero__stat-period {
+  font-size: 5.499px;
+  line-height: 9.165px;
+  color: #667085;
+}
+
+.wp-hero__vdiv {
+  flex: none;
+  width: 0;
+  height: 53.615px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-hero__vdiv img {
+  flex: none;
+  transform: rotate(-90deg);
+}
+
+/* Bottom tables */
+.wp-hero__bottom {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 7.332px;
+}
+
+.wp-hero__table {
+  padding: 9.165px 0 7.332px;
+  border: 0.458px solid #eaecf0;
+  border-radius: 6.415px;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 7.332px;
+}
+
+.wp-hero__table--invest {
+  flex: none;
+  width: 206.212px;
+}
+
+.wp-hero__table--tx {
+  flex: 1 0 0;
+  min-width: 1px;
+}
+
+.wp-hero__invest-inner {
+  width: 100%;
+  padding: 0 9.165px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.666px;
+}
+
+.wp-hero__table-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.833px;
+}
+
+.wp-hero__table-head > :first-child {
+  flex: 1 0 0;
+  min-width: 1px;
+}
+
+.wp-hero__table-head--pad {
+  padding: 0 9.165px;
+}
+
+.wp-hero__deals {
+  display: flex;
+  flex-direction: column;
+  gap: 3.666px;
+}
+
+.wp-hero__deal {
+  height: 32.994px;
+  padding: 7.332px 0;
+  border-radius: 7.332px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wp-hero__deal-left {
+  display: flex;
+  align-items: center;
+  gap: 5.499px;
+}
+
+.wp-hero__deal-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.833px;
+}
+
+.wp-hero__deal-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1.833px;
+}
+
+.wp-hero__deal-title {
+  font-family: var(--font-body);
+  font-size: 7.332px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.0916px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.wp-hero__badge {
+  padding: 0.916px 2.749px;
+  border-radius: 29.328px;
+  font-size: 4.582px;
+  font-weight: 500;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.wp-hero__badge--green {
+  background: #ebf7ea;
+  color: #107e4b;
+}
+
+.wp-hero__badge--yellow {
+  background: #fff3e6;
+  color: #e87c07;
+}
+
+.wp-hero__badge--blue {
+  background: #e7f1fd;
+  color: #0a6ad9;
+}
+
+.wp-hero__deal-meta {
+  font-size: 5.499px;
+  line-height: normal;
+  color: #475467;
+  white-space: nowrap;
+}
+
+/* Recent transactions */
+.wp-hero__tx-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.666px;
+}
+
+.wp-hero__tx-group {
+  padding: 0 10.998px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wp-hero__tx-group--gap {
+  gap: 4.582px;
+}
+
+.wp-hero__tx {
+  padding: 7.332px 0;
+  border-bottom: 0.458px solid #eaecf0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wp-hero__tx--plain {
+  border-bottom: 0;
+}
+
+.wp-hero__tx-main {
+  display: flex;
+  align-items: center;
+  gap: 5.499px;
+}
+
+.wp-hero__tx-icon {
+  position: relative;
+  flex: none;
+  width: 18.33px;
+  height: 18.33px;
+}
+
+.wp-hero__tx-icon svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 9.165px;
+  height: 9.165px;
+  transform: translate(-50%, -50%);
+}
+
+.wp-hero__tx-icon--green {
+  color: #17b26a;
+}
+
+.wp-hero__tx-icon--red {
+  color: #f04438;
+}
+
+.wp-hero__tx-icon--blue {
+  color: #0a6ad9;
+}
+
+.wp-hero__tx-text {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 9.165px;
+  white-space: nowrap;
+}
+
+.wp-hero__tx-text--end {
+  align-items: flex-end;
+}
+
+.wp-hero__tx-title {
+  font-size: 6.415px;
+  font-weight: 500;
+  color: #101828;
+}
+
+.wp-hero__tx-date {
+  font-size: 5.499px;
+  color: #667085;
+}
+
+.wp-hero__tx-sub {
+  width: 39.409px;
+}

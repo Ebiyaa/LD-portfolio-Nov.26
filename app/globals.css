@@ -1,0 +1,159 @@
+/* Design tokens (Figma: "mirafolio" styles). Design width 1512px, 64px gutters. */
+:root {
+  --ink: #1b202a; /* Mirage */
+  --muted: #3c4048; /* Mako */
+  --paper: #f1f1f3;
+  --card: #fcfcfd; /* Athens Gray */
+  --rule: #c6c7c9;
+  --pill-border: #eeeeee;
+  --green: #17b26a;
+  --btn-dark: linear-gradient(148.28deg, #1a3f2e 0%, #000 100%);
+
+  --font-display: var(--font-geist), system-ui, sans-serif;
+  --font-body: var(--font-inter-tight), system-ui, sans-serif;
+  --font-button: var(--font-inter), system-ui, sans-serif;
+
+  --gutter: 64px;
+  --max: 1512px;
+}
+
+@media (max-width: 900px) {
+  :root { --gutter: 24px; }
+}
+@media (max-width: 480px) {
+  :root { --gutter: 16px; }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 22px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+/* Inline underlined link used in body copy (Figma: Inter Tight SemiBold, underline from font). */
+.text-link {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-position: from-font;
+  color: inherit;
+}
+
+/* Pills: dark primary (Download my CV) and outline secondary (Connect). */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 43px;
+  padding: 0 24px;
+  border-radius: 100px;
+  font-family: var(--font-button);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22.4px;
+  letter-spacing: -0.05px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn--primary {
+  color: var(--card);
+  background: var(--btn-dark);
+  box-shadow:
+    0 0.784px 0.627px -0.429px rgba(0, 0, 0, 0.15),
+    0 1.92px 1.536px -0.857px rgba(0, 0, 0, 0.15),
+    0 3.637px 2.91px -1.286px rgba(0, 0, 0, 0.15),
+    0 6.35px 5.08px -1.714px rgba(0, 0, 0, 0.14),
+    0 11.052px 8.842px -2.143px rgba(0, 0, 0, 0.14),
+    0 20.243px 16.194px -2.571px rgba(0, 0, 0, 0.12),
+    0 40px 32px -3px rgba(0, 0, 0, 0.1);
+}
+.btn--outline {
+  color: var(--ink);
+  border: 1px solid #000;
+  background: transparent;
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Small white tag/pill (footer links, project tags). */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 9999px;
+  background: #fff;
+  border: 1px solid var(--pill-border);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.05px;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

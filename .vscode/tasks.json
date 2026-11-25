@@ -1,0 +1,17 @@
+{
+  // Starts the dev server (http://localhost:3200) in VS Code's terminal when this folder opens.
+  // The first time, VS Code asks whether to allow automatic tasks for this folder: choose "Allow".
+  // Run it by hand any time with: Terminal → Run Task… → dev
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "runOptions": { "runOn": "folderOpen" }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+/* WeWire Customer Platform page. Shared layout lives in components/case-study/case-study.css;
+   each mockup card styles itself in ./mockups/<name>.css. */
+.wp-page .cs-grid {
+  margin: 0;
+}
